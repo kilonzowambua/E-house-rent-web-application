@@ -24,42 +24,16 @@
 								echo "<script>alert('Access Denied Please Check Your Credentials');</script>";
 							}
 			}
-							/*			if(isset($_POST['register'])){
-							include 'includes/config.php';
-							$fname = $_POST['fname'];
-							$mname = ($_POST['mname']);
-							$lname= $_POST['lname'];
-							$age= ($_POST['age']);
-						  $email = $_POST['email'];
-							$password = ($_POST['password']);
 							
-							
-							$qry = "INSERT INTO client (fname,mname,lname,age,email,password)
-							VALUES('$fname','$mname','$lname','$age','$email','$password')";
-							$result = $conn->query($qry);
-							if($result == TRUE){
-								echo "<script type = \"text/javascript\">
-											alert(\"Successfully Joined!!.\");
-											
-											</script>";
-							} else{
-								echo "<script type = \"text/javascript\">
-											alert(\"Registration Failed. Try Again\");
-											
-											</script>";
-							}
-						}
-						*/
 					  ?>
 					 
 <!DOCTYPE html>
 <html lang="zxx">
 <head>
-    <title>I-House rental</title>
+    <title>E-House rental</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8" />
-    <meta name="keywords" content="Vicarage Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
-	SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony Ericsson, Motorola web design" />
+    <meta name="keywords" content="Welcome to E-house rental. The best and easy way of getting house" />
     <script>
         addEventListener("load", function () {
             setTimeout(hideURLbar, 0);
@@ -83,56 +57,7 @@
     <!-- banner -->
     <div class="banner">
         <!-- header -->
-        <header>
-            <nav class="navbar navbar-expand-lg navbar-light bg-gradient-secondary">
-                <h1>
-                    <a class="navbar-brand text-white" href="index.php">
-                        E-house rental
-                    </a>
-                </h1>
-                <button class="navbar-toggler ml-md-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav ml-lg-auto text-center">
-                        <li class="nav-item active  mr-3 mt-lg-0 mt-3">
-                            <a class="nav-link" href="index.php">Home
-                                <span class="sr-only">(current)</span>
-                            </a>
-                        </li>
-                        <li class="nav-item  mr-3 mt-lg-0 mt-3">
-                            <a class="nav-link" href="services.php">services</a>
-                        </li>
-                        <li class="nav-item dropdown mr-3 mt-lg-0 mt-3">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
-                                aria-expanded="false">
-                                Other services
-                            </a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="about.php">About</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="typo.php">Typography</a>
-                            </div>
-                        </li>
-                        <li class="nav-item mr-3 mt-lg-0 mt-3">
-                            <a class="nav-link" href="gallery.php">Gallery</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="contact.php">Contact</a>
-                        </li>
-						<li class="nav-item">
-                            <a class="nav-link" href="admin/login.php">Admin</a>
-                        </li>
-                        <li>
-                            <button type="button" class="btn  ml-lg-2 w3ls-btn" data-toggle="modal" aria-pressed="false" data-target="#exampleModal">
-                                Login
-                            </button>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
-        </header>
+        <?php include('partials/_header.php') ?>
         <!-- //header -->
         <div class="container">
             <!-- banner-text -->
@@ -357,87 +282,11 @@
 			</div>
 		</div>
 	</div>
-	<!-- //video and events -->
-	<!-- Footer -->
-		<footer id="footer" class="py-5">
-			<div class="container">
-				<div class="row  py-lg-5">
-					<div class="col-lg-3 col-sm-6 footer-logo">
-						<h5>about us</h5>
-						<h2>
-							<a href="index.html">Real Estate</a>
-						</h2>
-						<p class="mt-3">Nulla quis lorem ut libermalesuada ultrices posuere cubilia feugiatrice praesent sapien massa</p>
-					</div>
-					<div class="col-lg-3 col-sm-6 mt-sm-0 mt-4">
-						<h5>Quick links</h5>
-						<ul class="list-unstyled quick-links">
-							<li>
-								<a href="index.php">
-								<i class="fa fa-angle-double-right"></i>Home</a>
-							</li>
-							<li>
-								<a href="about.php">
-									<i class="fa fa-angle-double-right"></i>About</a>
-							</li>
-							<li>
-								<a href="services.php">
-									<i class="fa fa-angle-double-right"></i>Services</a>
-							</li>
-							<li>
-								<a href="gallery.php">
-									<i class="fa fa-angle-double-right"></i>Gallery</a>
-							</li>
-							<li>
-								<a href="contact.php">
-									<i class="fa fa-angle-double-right"></i>Contact</a>
-							</li>
-						</ul>
-					</div>
-					<div class="col-lg-3 col-sm-6 mt-lg-0 mt-4">
-						<h5>working hours</h5>
-						<ul class="list-unstyled quick-links">
-							<li>
-								Monday - Friday
-								<br>
-								<span>9.00 - 20.00</span>
-							</li>
-							<li>
-								Saturday
-								<br>
-								<span> 10.00 - 16.00 </span>
-							</li>
-							<li>
-								Sunday
-								<br>
-								<span> 9.30 - 18.00 </span>
-							</li>
-						</ul>
-					</div>
-					<div class="col-lg-3 col-sm-6 footer_grid1 mt-lg-0 mt-4">
-						<h5>Address</h5>
-						<div class="fv3-contact">
-							<span class="fas fa-envelope-open mr-2"></span>
-							<p>
-								<a href="mailto:example@email.com">info@example.com</a>
-							</p>
-						</div>
-						<div class="fv3-contact my-2">
-							<span class="fas fa-phone-volume mr-2"></span>
-							<p>+456 123 7890</p>
-						</div>
-						<div class="fv3-contact">
-							<span class="fas fa-home mr-2"></span>
-							<p>+90 nsequursu dsdesdc,
-								<br>xxx Street State 34789.</p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</footer>
+
+	<?php include('partials/_footer.php') ?>
 		<div class="cpy-right text-center py-4">
 			<p class="text-white">© 2019 E-House rental. All rights reserved | Design by
-				<a href="http://kilonzowambua.github.io"> Kilodev.</a>
+				<a href="https://kilonzowambua.github.io"> Kilodev.</a>
 			</p>
 		</div>
 	</div>

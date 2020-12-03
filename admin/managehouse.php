@@ -67,7 +67,7 @@ $stmt= $conn->prepare($ret) ;
                                                             <i class="zmdi zmdi-eye"></i>
                                                           
                                                         </button></a>
-                                                        ?hid=<?php echo $row->hid;?>                                                    <a href="edithouse.php?hid=<?php echo $row->hid;?>"><button class="item" data-toggle="tooltip" data-placement="top" title="Edit">
+                                                                                                          <a href="edithouse.php?hid=<?php echo $row->hid;?>"><button class="item" data-toggle="tooltip" data-placement="top" title="Edit">
                                                             <i class="zmdi zmdi-edit"></i>
                                                         </button></a>
                                                         <a href="managehouse.php?del=<?php echo $row->hid;?>"onClick= "return confirm('Do you want to delete ?')" ><button class="item" data-toggle="tooltip" data-placement="top" title="Delete">

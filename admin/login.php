@@ -55,7 +55,7 @@
 			{
 			
 			$email=$_POST['email'] ;
-			$password=sha1($_POST['password']);
+			$password = sha1(md5($_POST['password']));
 			$stmt=$conn->prepare("SELECT email,password,userid FROM user WHERE email=? and password=? ");
 							$stmt->bind_param('ss',$email,$password);
 							$stmt->execute();
