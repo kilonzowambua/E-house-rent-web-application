@@ -19,20 +19,6 @@
                         <li class="nav-item  mr-3 mt-lg-0 mt-3">
                             <a class="nav-link" href="services.php">services</a>
                         </li>
-                        <li class="nav-item dropdown mr-3 mt-lg-0 mt-3">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
-                                aria-expanded="false">
-                                Other services
-                            </a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="about.php">About</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="typo.php">Typography</a>
-                            </div>
-                        </li>
-                        <li class="nav-item mr-3 mt-lg-0 mt-3">
-                            <a class="nav-link" href="gallery.php">Gallery</a>
-                        </li>
                         <li class="nav-item">
                             <a class="nav-link" href="contact.php">Contact</a>
                         </li>
