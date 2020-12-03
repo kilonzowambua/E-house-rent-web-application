@@ -5,7 +5,7 @@
 					<div class="col-lg-3 col-sm-6 footer-logo">
 						<h5>about us</h5>
 						<h2>
-							<a href="index.html">E-house Rental</a>
+							<a href="index.php">E-house Rental</a>
 						</h2>
 						<p class="mt-3">Nulla quis lorem ut libermalesuada ultrices posuere cubilia feugiatrice praesent sapien massa</p>
 					</div>
