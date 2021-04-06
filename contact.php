@@ -168,7 +168,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                 </form>
             </div>
             <div class="col-md-6 map mt-md-0 mt-5">
-				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d805184.6315353655!2d144.49269953060633!3d-37.971237044864175!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad646b5d2ba4df7%3A0x4045675218ccd90!2sMelbourne+VIC%2C+Australia!5e0!3m2!1sen!2sin!4v1532474074705"  allowfullscreen></iframe>
+				<iframe src="https://www.google.com/maps/embed?data=!3m2!1e3!4b1!4m5!3m4!1s0x182f1172d84d49a7:0xf7cf0254b297924c!8m2!3d-1.2907844!4d36.8206787"  allowfullscreen></iframe>
             </div>
         </div>
     </div>
