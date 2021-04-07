@@ -91,7 +91,7 @@
                                         <input type="checkbox" name="remember">Remember Me
                                     </label>
                                     <label>
-                                        <a href="#">Forgotten Password?</a>
+                                        <a href="admin_reset_password.php">Forgotten Password?</a>
                                     </label>
                                 </div>
                                 <input class="au-btn au-btn--block au-btn--green m-b-20"name="login" value="Login" type="submit">
