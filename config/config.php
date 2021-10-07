@@ -25,5 +25,5 @@
 $dbuser = "root";
 $dbpass = "";
 $host = "localhost";
-$db = "UBC_MIS";
+$db = "E-HOUSERENTAL";
 $mysqli = new mysqli($host, $dbuser, $dbpass, $db);

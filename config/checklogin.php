@@ -22,49 +22,17 @@
  */
 
 /* Super Admin Check Login  */
-function superadmin_check_login()
+function user_check_login()
 {
-    if (strlen($_SESSION['staff_id']) == 0) {
+    if (strlen($_SESSION['user_id']) == 0) {
         $host = $_SERVER['HTTP_HOST'];
         $uri = rtrim(dirname($_SERVER['PHP_SELF']), '/\\');
         $extra = 'index';
-        $_SESSION['staff_id'] = '';
+        $_SESSION['user_id'] = '';
         header("Location: http://$host$uri/$extra");
     }
 }
 
-/*  User Checklogin*/
-function admin_checklogin()
-{
-    if (strlen($_SESSION['staff_id']) == 0) {
-        $host = $_SERVER['HTTP_HOST'];
-        $uri = rtrim(dirname($_SERVER['PHP_SELF']), '/\\');
-        $extra = 'index';
-        $_SESSION['staff_id'] = '';
-        header("Location: http://$host$uri/$extra");
-    }
-}
 
 /* Staff Checklogin */
-function staff_checklogin()
-{
-    if (strlen($_SESSION['staff_id']) == 0) {
-        $host = $_SERVER['HTTP_HOST'];
-        $uri = rtrim(dirname($_SERVER['PHP_SELF']), '/\\');
-        $extra = 'index';
-        $_SESSION['staff_id'] = '';
-        header("Location: http://$host$uri/$extra");
-    }
-}
 
-/* Student Checklogin */
-function student_checklogin()
-{
-    if (strlen($_SESSION['student_id']) == 0) {
-        $host = $_SERVER['HTTP_HOST'];
-        $uri = rtrim(dirname($_SERVER['PHP_SELF']), '/\\');
-        $extra = 'index';
-        $_SESSION['student_id'] = '';
-        header("Location: http://$host$uri/$extra");
-    }
-}

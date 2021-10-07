@@ -16,7 +16,8 @@
     <link rel="stylesheet" href="../public/vendors/selectFX/css/cs-skin-elastic.css">
     <link rel="stylesheet" href="../public/vendors/jqvmap/dist/jqvmap.min.css">
     <link rel="stylesheet" href="../public/assets/css/style.css">
-
+ <!-- Alert Js -->
+ <link rel="stylesheet" href="../public/plugins/iziToast/iziToast.min.css">
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800' rel='stylesheet' type='text/css'>
 
 
