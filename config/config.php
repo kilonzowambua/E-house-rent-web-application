@@ -27,3 +27,12 @@ $dbpass = "";
 $host = "localhost";
 $db = "E-HOUSERENTAL";
 $mysqli = new mysqli($host, $dbuser, $dbpass, $db);
+ // your app consumer key
+ define( 'CONSUMER_KEY', 'PozV392VPu9neeVcILp83IoYL' );
+
+ // your app consumer secret
+ define( 'CONSUMER_SECRET', 'DKXh1mvbTFmNIdfezIu7TtZ0CbULpLxdBnqPdEvhoyoLcIOCOv' );
+
+ // your app callback url
+
+ define( 'OAUTH_CALLBACK', 'http://127.0.0.1/e-houserental/views/user_login' );
