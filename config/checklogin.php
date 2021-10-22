@@ -24,11 +24,11 @@
 /* Super Admin Check Login  */
 function user_check_login()
 {
-    if (strlen($_SESSION['user_id']) == 0) {
+    if (strlen($_SESSION['user_email']) == 0) {
         $host = $_SERVER['HTTP_HOST'];
         $uri = rtrim(dirname($_SERVER['PHP_SELF']), '/\\');
         $extra = 'index';
-        $_SESSION['user_id'] = '';
+        $_SESSION['user_email'] = '';
         header("Location: http://$host$uri/$extra");
     }
 }

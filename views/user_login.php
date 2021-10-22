@@ -53,14 +53,14 @@ if (isset($_POST['login'])) {
     
 use Abraham\TwitterOAuth\TwitterOAuth;
 
+/*
     if ( isset( $_SESSION['twitter_access_token'] ) && $_SESSION['twitter_access_token'] ) { // we have an access token
         $isLoggedIn = true;    
     } elseif ( isset( $_GET['oauth_verifier'] ) && isset( $_GET['oauth_token'] ) && isset( $_SESSION['oauth_token'] ) && $_GET['oauth_token'] == $_SESSION['oauth_token'] ) { // coming from twitter callback url
         // setup connection to twitter with request token
-        $connection = new TwitterOAuth( sv5GoaQlV58aUcmbaKsdjyQev, zRIPE9CA3Bb19KlRtH55ev9MgtyZJhKrUSmOPVQM5a2ePmHX2M, $_SESSION['oauth_token'], $_SESSION['oauth_token_secret'] );
-        
-        // get an access token
-        $access_token = $connection->oauth( "oauth/access_token", array( "oauth_verifier" => $_GET['oauth_verifier'] ) );
+        $connection = new TwitterOAuth(CONSUMER_KEY, CONSUMER_SECRET);
+        $request_token = $connection->oauth('oauth/request_token', array('oauth_callback' => OAUTH_CALLBACK));
+
 
         // save access token to the session
         $_SESSION['twitter_access_token'] = $access_token;
@@ -69,6 +69,7 @@ use Abraham\TwitterOAuth\TwitterOAuth;
         $isLoggedIn = true;
     } else { // not authorized with our app, show login button
         // connect to twitter with our app creds
+
         $connection = new TwitterOAuth( CONSUMER_KEY, CONSUMER_SECRET );
 
         // get a request token from twitter
@@ -123,7 +124,7 @@ use Abraham\TwitterOAuth\TwitterOAuth;
     }
 
 //create using Google
-
+*/
 ?>
 <!doctype html>
 

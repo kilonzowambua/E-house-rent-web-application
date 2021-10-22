@@ -28,11 +28,12 @@ $host = "localhost";
 $db = "E-HOUSERENTAL";
 $mysqli = new mysqli($host, $dbuser, $dbpass, $db);
  // your app consumer key
- define( 'CONSUMER_KEY', 'PozV392VPu9neeVcILp83IoYL' );
+ define( 'CONSUMER_KEY', 'N5oPLW5b1irfbSi4TJahxLTuP' );
 
  // your app consumer secret
- define( 'CONSUMER_SECRET', 'DKXh1mvbTFmNIdfezIu7TtZ0CbULpLxdBnqPdEvhoyoLcIOCOv' );
+ define( 'CONSUMER_SECRET', 'K6MhvG6SzdIvGwvMgI9a5TPutnNI4joFd1Ii1qh0MVXRSWpyj7' );
 
  // your app callback url
 
- define( 'OAUTH_CALLBACK', 'http://127.0.0.1/e-houserental/views/user_login' );
+ define( 'OAUTH_CALLBACK', 'http://localhost:80/e-houserental/views/user_dashboard' );
+ 
