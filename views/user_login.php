@@ -33,16 +33,24 @@ require '../vendor/twitteroauth/autoload.php';
 if (isset($_POST['login'])) {
     $user_email = $_POST['user_email'];
     $user_password = sha1(md5($_POST['user_password']));
-    $stmt = $mysqli->prepare("SELECT user_email,user_password FROM user WHERE user_email=? and user_password=? ");
+    $stmt = $mysqli->prepare("SELECT user_email,user_password,user_access FROM user WHERE user_email=? and user_password=? ");
     $stmt->bind_param('ss', $user_email, $user_password);
     $stmt->execute();
-    $stmt->bind_result($user_email, $user_password);
+    $stmt->bind_result($user_email, $user_password,$user_access);
     $rs = $stmt->fetch();
   
-    if ($rs) {
+    if ($rs && $user_access =="admin") {
       $_SESSION['user_email'] = $user_email;
+      header("location:admin_home");
+    } elseif ($rs && $user_access =="staff") {
+        $_SESSION['user_email'] = $user_email;
+      header("location:staff_home");
+    }
+    elseif ($rs && $user_access =="user") {
+        $_SESSION['user_email'] = $user_email;
       header("location:user_home");
-    } else {
+    }
+   else {
       $err = "Access Denied Please Check Your Email Or Password";
       
     }
