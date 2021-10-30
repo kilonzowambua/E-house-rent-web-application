@@ -23,8 +23,9 @@
 session_start();
 require_once('../config/config.php');
 require_once('../config/checklogin.php');
-//require_once('../partials/principal_analytics.php');
-//user_check_login();
+require_once('../config/admin_analytics.php');
+
+user_check_login();
 ?>
 <!doctype html>
 
@@ -41,6 +42,21 @@ include('../partials/Left Panel.php');
 include('../partials/Right Panel.php');
 include('../partials/breadcrumbs.php');
 ?>
+<?php
+$user_email = $_SESSION['user_email'];
+  $ret = "SELECT * FROM user WHERE user_email ='$user_email'";
+$stmt = $mysqli->prepare($ret);
+$stmt->execute(); //ok
+$res = $stmt->get_result();
+while ($row = $res->fetch_object()) {
+   
+    if ($row->user_profile != '') {
+        $url = "../public/images/avatar/$row->user_profile";
+    } else {
+        $url = "../public/images/avatar/no-profile.png";
+    }
+}
+  ?>
      
         <div class="content mt-3">
 
@@ -62,13 +78,11 @@ include('../partials/breadcrumbs.php');
                             </div>
                         </div>
                         <h4 class="mb-0">
-                            <span class="count">10468</span>
+                            <span class="count"><?php echo $user ?></span>
                         </h4>
-                        <p class="text-light">Members online</p>
+                        <p class="text-light">User</p>
 
-                        <div class="chart-wrapper px-0" style="height:70px;" height="70">
-                            <canvas id="widgetChart1"></canvas>
-                        </div>
+                        
 
                     </div>
 
@@ -92,13 +106,11 @@ include('../partials/breadcrumbs.php');
                             </div>
                         </div>
                         <h4 class="mb-0">
-                            <span class="count">10468</span>
+                            <span class="count"><?php echo $staff ?></span>
                         </h4>
-                        <p class="text-light">Members online</p>
+                        <p class="text-light">Staff</p>
 
-                        <div class="chart-wrapper px-0" style="height:70px;" height="70">
-                            <canvas id="widgetChart2"></canvas>
-                        </div>
+                       
 
                     </div>
                 </div>
@@ -121,15 +133,13 @@ include('../partials/breadcrumbs.php');
                             </div>
                         </div>
                         <h4 class="mb-0">
-                            <span class="count">10468</span>
+                            <span class="count"><?php echo $house ?></span>
                         </h4>
-                        <p class="text-light">Members online</p>
+                        <p class="text-light">House</p>
 
                     </div>
 
-                    <div class="chart-wrapper px-0" style="height:70px;" height="70">
-                        <canvas id="widgetChart3"></canvas>
-                    </div>
+                    
                 </div>
             </div>
             <!--/.col-->
@@ -150,41 +160,43 @@ include('../partials/breadcrumbs.php');
                             </div>
                         </div>
                         <h4 class="mb-0">
-                            <span class="count">10468</span>
+                            <span class="count"><?php echo $total_revenue ?></span>
                         </h4>
-                        <p class="text-light">Members online</p>
+                        <p class="text-light">Total Revenue</p>
 
-                        <div class="chart-wrapper px-3" style="height:70px;" height="70">
-                            <canvas id="widgetChart4"></canvas>
-                        </div>
+                        
 
                     </div>
+ 
                 </div>
             </div>
-            <!--/.col-->
 
-           
-
-
-            
-
-           
-
-
-            
-
-         
-
-            
-
-            
-
-            
-
-            
-                <!-- /# card -->
+        </div>
+        <div class="col-lg-4 col-md-6">
+        <div class="card">
+            <div class="card-header">
+                <strong class="card-title mb-3">Recent Joined User</strong>
             </div>
-
+            <div class="card-body">
+                <div class="mx-auto d-block">
+                    
+                </div>
+               </div>
+        </div>
+    </div>
+    <div class="col-lg-4 col-md-6"></div>
+    <div class="col-lg-4 col-md-6">
+        <div class="card">
+            <div class="card-header">
+                <strong class="card-title mb-3">Recent Payments</strong>
+            </div>
+            <div class="card-body">
+                <div class="mx-auto d-block">
+                    
+                </div>
+               </div>
+        </div>
+    </div>
 
         </div> <!-- .content -->
     </div><!-- /#right-panel -->
