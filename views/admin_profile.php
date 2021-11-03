@@ -55,7 +55,7 @@ while ($row = $res->fetch_object()) {
     } else {
         $url = "../public/images/avatar/no-profile.png";
     }
-}
+
   ?>
      <div class="breadcrumbs">
             <div class="col-sm-4">
@@ -83,21 +83,17 @@ while ($row = $res->fetch_object()) {
                         <div class="card">
                             <div class="card-body">
                                 <div class="mx-auto d-block">
-                                    <img class="rounded-circle mx-auto d-block" src="images/admin.jpg" alt="Card image cap">
-                                    <h5 class="text-sm-center mt-2 mb-1">Steven Lee</h5>
-                                    <div class="location text-sm-center"><i class="fa fa-map-marker"></i> California, United States</div>
+                                    <img class="rounded-circle mx-auto d-block" src="<?php echo $url ?>" alt="Card image cap">
+                                    <h5 class="text-sm-center mt-2 mb-1"><?php echo $row->user_name ?></h5>
+                                    <div class="location text-sm-center"><i class="fa fa-suitcase"></i> <?php echo $row->user_access ?></div>
                                 </div>
                                 <hr>
+                                
                                 <div class="card-text text-sm-center">
-                                    <a href="#"><i class="fa fa-facebook pr-1"></i></a>
-                                    <a href="#"><i class="fa fa-twitter pr-1"></i></a>
-                                    <a href="#"><i class="fa fa-linkedin pr-1"></i></a>
-                                    <a href="#"><i class="fa fa-pinterest pr-1"></i></a>
+                                <strong class="card-title mb-3">Generate StaffID</strong>
                                 </div>
                             </div>
-                            <div class="card-footer">
-                                <strong class="card-title mb-3">Profile Card</strong>
-                            </div>
+                            
                         </div>
                     </div>
                    
@@ -110,6 +106,7 @@ while ($row = $res->fetch_object()) {
     <!-- Right Panel -->
 
     <?php 
+}
 include('../partials/script.php');
 
 ?>
